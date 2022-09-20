@@ -20,7 +20,7 @@ connection.once("open", () => console.log("database connection established"));
 app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
-app.use(express.static("client"));
+app.use(express.static("./client"));
 
 app.get('*',(req,res)=>{
   res.sendFile(path.resolve(__dirname,'client',"index.html"))
